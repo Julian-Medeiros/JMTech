@@ -1,81 +1,66 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GPGPU e Computação CUDA</title>
-    <!-- Normalização e Estilos -->
-    <link rel="stylesheet" href="css/modern-normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-
-    <header>
-        <a href="#introducao">
-            <img src="img/logo.WebP" alt="Logotipo JMTech" class="logo" fetchpriority="high">
-        </a>
-        <input type="checkbox" id="menu-toggle" class="menu-toggle">
-        <label for="menu-toggle" class="menu-icon">&#9776;</label>
-        
-        <nav>
-            <ul>
-                <li><a href="#introducao">Introdução</a></li>
-                <li><a href="#arquitetura">Arquitetura CUDA</a></li>
-                <li><a href="#galeria">Galeria Flexbox</a></li>
-                <li><a href="#referencias">Referências</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="introducao">
-            <h1>GPGPU e Computação CUDA</h1>
-            
-            <h2>O que é GPGPU?</h2>
-            <p>GPGPU significa <em>General-Purpose Computing on Graphics Processing Units</em> (Computação de Propósito Geral em Unidades de Processamento Gráfico). Tradicionalmente, as GPUs eram projetadas exclusivamente para renderizar gráficos. Com a GPGPU, os desenvolvedores podem utilizar o imenso poder de processamento paralelo das placas de vídeo para resolver problemas complexos de computação, como simulações físicas, inteligência artificial e processamento de dados científicos.</p>
-            
-            <figure>
-                <img src="img/fig1.WebP" alt="Diagrama comparativo mostrando os múltiplos núcleos de uma GPU" loading="lazy">
-                <figcaption>Figura 1: Comparação de núcleos entre CPU e GPU.</figcaption>
-            </figure>
-
-            <h2 id="arquitetura">Arquitetura CUDA</h2>
-            <p>CUDA (<em>Compute Unified Device Architecture</em>) é uma plataforma de computação paralela e um modelo de programação criado pela NVIDIA. Ela permite que os desenvolvedores de software utilizem uma GPU habilitada para CUDA para processamento de propósito geral. O CUDA fornece acesso direto ao conjunto de instruções virtuais da GPU e aos elementos de computação paralela.</p>
-            
-            <figure>
-                <img src="img/fig2.WebP" alt="Exemplo de código em linguagem C utilizando a sintaxe CUDA para processamento paralelo" loading="lazy">
-                <figcaption>Figura 2: Exemplo de código CUDA.</figcaption>
-            </figure>
-            
-            <p>A grande vantagem do CUDA é que ele suporta linguagens de programação populares como C, C++ e Fortran, facilitando a vida dos desenvolvedores que não precisam aprender linguagens gráficas específicas, como OpenGL ou DirectX, para realizar cálculos matemáticos pesados.</p>
-        </section>
-
-        <section id="galeria">
-            <h2>Galeria de Aplicações e Hardware</h2>
-            
-            <div class="galeria-flex">
-                <img src="img/gal1.WebP" alt="Placa de vídeo NVIDIA moderna utilizada em servidores de Inteligência Artificial" loading="lazy">
-                <img src="img/gal2.WebP" alt="Data center equipado com milhares de GPUs interligadas" loading="lazy">
-                <img src="img/gal3.WebP" alt="Pesquisador analisando simulação de fluidos gerada por GPGPU" loading="lazy">
-                <img src="img/gal4.WebP" alt="Representação gráfica de uma rede neural profunda processada por CUDA" loading="lazy">
-            </div>
-
-            <h2 id="referencias">Referências</h2>
-            <ul>
-                <li>NVIDIA. <em>CUDA Zone</em>. Disponível em: <a href="https://developer.nvidia.com/cuda-zone">https://developer.nvidia.com/cuda-zone.</a></li>
-                <li>WIKIPEDIA. <em>General-purpose computing on graphics processing units</em>. Disponível em: <a href="https://en.wikipedia.org/wiki/General-purpose_computing_on_graphics_processing_units">https://en.wikipedia.org/wiki/General-purpose_computing_on_graphics_processing_units.</a></li>
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        <p>Desenvolvido por Julian da Silva Medeiros <br>
-            Design de Interfaces</p>
-    </footer>
-
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GPGPU e Computação CUDA</title>
+        <link rel="stylesheet" href="css/modern-normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <a href="#introducao">
+                <img src="img/logo.WebP" alt="Logotipo JMTech" class="logo" fetchpriority="high">
+            </a>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <nav>
+                <ul>
+                    <li><a href="#introducao">Introdução</a></li>
+                    <li><a href="#arquitetura">Arquitetura CUDA</a></li>
+                    <li><a href="#galeria">Galeria Flexbox</a></li>
+                    <li><a href="#referencias">Referências</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="introducao">
+                <h1>GPGPU e Computação CUDA</h1>      
+                <h2>O que é GPGPU?</h2>
+                <p>GPGPU significa <em>General-Purpose Computing on Graphics Processing Units</em> (Computação de Propósito Geral em Unidades de Processamento Gráfico). Tradicionalmente, as GPUs eram projetadas exclusivamente para renderizar gráficos. Com a GPGPU, os desenvolvedores podem utilizar o imenso poder de processamento paralelo das placas de vídeo para resolver problemas complexos de computação, como simulações físicas, inteligência artificial e processamento de dados científicos.</p>    
+                <figure>
+                    <img src="img/fig1.WebP" alt="Diagrama comparativo mostrando os múltiplos núcleos de uma GPU" fetchpriority="high">
+                    <figcaption>Figura 1: Comparação de núcleos entre CPU e GPU.</figcaption>
+                </figure>
+                <h2 id="arquitetura">Arquitetura CUDA</h2>
+                <p>CUDA (<em>Compute Unified Device Architecture</em>) é uma plataforma de computação paralela e um modelo de programação criado pela NVIDIA. Ela permite que os desenvolvedores de software utilizem uma GPU habilitada para CUDA para processamento de propósito geral. O CUDA fornece acesso direto ao conjunto de instruções virtuais da GPU e aos elementos de computação paralela.</p>
+                <figure>
+                    <img src="img/fig2.WebP" alt="Exemplo de código em linguagem C utilizando a sintaxe CUDA para processamento paralelo" loading="lazy">
+                    <figcaption>Figura 2: Exemplo de código CUDA.</figcaption>
+                </figure>
+                <p>A grande vantagem do CUDA é que ele suporta linguagens de programação populares como C, C++ e Fortran, facilitando a vida dos desenvolvedores que não precisam aprender linguagens gráficas específicas, como OpenGL ou DirectX, para realizar cálculos matemáticos pesados.</p>
+            </section>
+            <section id="galeria">
+                <h2>Galeria de Aplicações e Hardware</h2>
+                <div class="galeria-flex">
+                    <img src="img/gal1.WebP" alt="Placa de vídeo NVIDIA moderna utilizada em servidores de Inteligência Artificial" loading="lazy">
+                    <img src="img/gal2.WebP" alt="Data center equipado com milhares de GPUs interligadas" loading="lazy">
+                    <img src="img/gal3.WebP" alt="Pesquisador analisando simulação de fluidos gerada por GPGPU" loading="lazy">
+                    <img src="img/gal4.WebP" alt="Representação gráfica de uma rede neural profunda processada por CUDA" loading="lazy">
+                </div>
+                <h2 id="referencias">Referências</h2>
+                <ul>
+                    <li>NVIDIA. <em>CUDA Zone</em>. Disponível em: <a href="https://developer.nvidia.com/cuda-zone">https://developer.nvidia.com/cuda-zone.</a></li>
+                    <li>WIKIPEDIA. <em>General-purpose computing on graphics processing units</em>. Disponível em: <a href="https://en.wikipedia.org/wiki/General-purpose_computing_on_graphics_processing_units">https://en.wikipedia.org/wiki/General-purpose_computing_on_graphics_processing_units.</a></li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <p>Desenvolvido por Julian da Silva Medeiros <br>
+                Design de Interfaces</p>
+        </footer>
+    </body>
 </html>
